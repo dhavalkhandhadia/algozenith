@@ -1,7 +1,9 @@
 # 🧠 Greedy Ideas — Problem References
 
-This document contains the **reference problems** corresponding to the greedy techniques discussed in class.  
-Some problems are **exact matches**, while a few are **closely related variants** that use the same core ideas.
+This document contains **carefully selected problems** corresponding to the greedy techniques discussed in class.  
+Each problem includes a **collapsible hint** so you can try it yourself before peeking 👀
+
+Some problems are **exact matches**, and some are **closely related variants** using the same greedy patterns.
 
 ---
 
@@ -10,19 +12,34 @@ Some problems are **exact matches**, while a few are **closely related variants*
 🔗 **Problem Link:**  
 https://open.kattis.com/problems/minimumscalar
 
-📝 **Notes:**  
-This is the **exact problem** discussed in class about rearranging two arrays to **minimize their dot product** using greedy sorting (one ascending, one descending).
+📝 **Match with class:** ✅ Exact
+
+<details>
+<summary>💡 Click to reveal hint</summary>
+
+Sort one array in **ascending** order and the other in **descending** order.  
+This is an application of the **rearrangement inequality** and can be proven using a **swap argument**.
+
+</details>
 
 ---
 
-## 📌 Q2 — CSES Task Scheduling / Projects
+## 📌 Q2 — CSES — Task Scheduling / Projects
 
 🔗 **Problem Link:**  
 https://cses.fi/problemset/task/1630/
 
-📝 **Notes:**  
-⚠️ This problem is **not an exact match** to what was discussed in class,  
-but it uses the **same greedy scheduling / sorting-by-ratio idea**.
+📝 **Match with class:** ⚠️ Similar (not exact)
+
+<details>
+<summary>💡 Click to reveal hint</summary>
+
+Think in terms of **ordering the tasks** to minimize total penalty / loss.  
+Try comparing two tasks `i` and `j` and decide which should come first using a **swap argument**.
+
+You will end up sorting by a **ratio or cross-multiplication condition**.
+
+</details>
 
 ---
 
@@ -31,9 +48,15 @@ but it uses the **same greedy scheduling / sorting-by-ratio idea**.
 🔗 **Problem Link:**  
 https://leetcode.com/problems/stone-game-vi/description/
 
-📝 **Notes:**  
-This matches the **Alice & Bob card picking game** discussed in class.  
-The greedy strategy is to **pick the card with maximum (Ai + Bi)**.
+📝 **Match with class:** ✅ Exact
+
+<details>
+<summary>💡 Click to reveal hint</summary>
+
+When it's a player's turn, they should pick the stone that **maximizes (Ai + Bi)**.  
+This reduces the game to **sorting by (Ai + Bi)** and picking alternately.
+
+</details>
 
 ---
 
@@ -42,10 +65,18 @@ The greedy strategy is to **pick the card with maximum (Ai + Bi)**.
 🔗 **Problem Link:**  
 https://codeforces.com/problemset/problem/520/B
 
-📝 **Notes:**  
-This is the **exact problem** discussed in class where you:
-- Start from `B` and work backwards to `A`
-- Use greedy + reverse thinking
+📝 **Match with class:** ✅ Exact
+
+<details>
+<summary>💡 Click to reveal hint</summary>
+
+Work **backwards** from `B` to `A`:
+- If `B` is even → divide by 2  
+- If `B` is odd → add 1  
+
+When `B ≤ A`, just add `(A - B)` to the answer.
+
+</details>
 
 ---
 
@@ -54,9 +85,17 @@ This is the **exact problem** discussed in class where you:
 🔗 **Problem Link:**  
 https://leetcode.com/problems/gas-station/description/
 
-📝 **Notes:**  
-⚠️ This problem is **not an exact match** to what was discussed in class,  
-but it is on **similar lines of greedy fuel / traversal optimization**.
+📝 **Match with class:** ⚠️ Similar (not exact)
+
+<details>
+<summary>💡 Click to reveal hint</summary>
+
+Try to think in terms of **feasibility** instead of simulation.  
+Track **total gas vs total cost** and find a **valid starting point** using greedy prefix logic.
+
+(This is different from the priority-queue fuel-cost problem, but conceptually related.)
+
+</details>
 
 ---
 
@@ -68,13 +107,14 @@ but it is on **similar lines of greedy fuel / traversal optimization**.
 | Q2 | Greedy Scheduling | ⚠️ Similar |
 | Q3 | Alice & Bob Game | ✅ Exact |
 | Q4 | Reverse Greedy Operations | ✅ Exact |
-| Q5 | Fuel / Cost Optimization | ⚠️ Similar |
+| Q5 | Fuel / Traversal Greedy | ⚠️ Similar |
 
 ---
 
-✨ *These problems together cover the core greedy patterns discussed:*
-- Sorting by strategy
-- Swap argument
-- Reverse greedy
+✨ *These problems together cover the most important greedy patterns:*
+
+- Sorting + swap argument
+- Greedy scheduling
 - Game theory greedy
-- Priority queue greedy
+- Reverse greedy
+- Prefix-feasibility greedy
