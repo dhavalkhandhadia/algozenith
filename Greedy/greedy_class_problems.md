@@ -111,10 +111,3 @@ Track **total gas vs total cost** and find a **valid starting point** using gree
 
 ---
 
-✨ *These problems together cover the most important greedy patterns:*
-
-- Sorting + swap argument
-- Greedy scheduling
-- Game theory greedy
-- Reverse greedy
-- Prefix-feasibility greedy
