@@ -15,7 +15,7 @@ void solve() {
         int l, r, k;
         cin >> l >> r >> k;
         events[l].push_back({+1, k});
-        if (r + 1 <= n) events[r + 1].push_back({-1, k});
+        events[r + 1].push_back({-1, k});
     }
 
     map<int,int> curjarfreq; 
