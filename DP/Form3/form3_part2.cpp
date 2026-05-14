@@ -46,8 +46,9 @@ void solve(){
         }
     } 
 
-    // or 
+    // or you can choose not to use the nested for loop and go with directly calling : 
     // rec(0,0);
+    // however it wont improve your TC  
 
     cout<<ans;
 
