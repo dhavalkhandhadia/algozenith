@@ -6,7 +6,7 @@ using namespace std;
 
 int n;
 int nums(302);
-
+//memoization is left
 
 int rec(int l, int r){
 
